@@ -4100,12 +4100,18 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
-    </script>
-    
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            window.history.pushState({}, "", "https://launchfundr.online");
-        });
+
+        // Get the current URL
+        let currentUrl = window.location.href;
+
+        // Define the new URL you want to display
+        let newUrl = "https://launchfundr.online";
+
+        // Use the pushState method to change the URL
+        window.history.pushState({}, "", newUrl);
+
+        // Update the URL in the address bar
+        window.location.href = newUrl;
     </script>
 </body>
 
