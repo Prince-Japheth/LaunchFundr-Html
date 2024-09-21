@@ -3716,7 +3716,7 @@
             <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6"
                 data-astro-source-file="C:/Users/USER/Documents/LaunchFundr/src/components/Container.astro"
                 data-astro-source-loc="1:54"> <img src="https://cdn-icons-png.flaticon.com/128/10161/10161094.png"
-                    alt="" class="w-6"
+                    alt="" class="w-6 mb-5"
                     data-astro-source-file="C:/Users/USER/Documents/LaunchFundr/src/components/Stats.astro"
                     data-astro-source-loc="9:8" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
                 <div class="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center"
@@ -4100,6 +4100,12 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.history.pushState({}, "", "https://launchfundr.online");
+        });
     </script>
 </body>
 
