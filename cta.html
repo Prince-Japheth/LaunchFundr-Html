@@ -3255,7 +3255,9 @@
                             <br>
 
                         </p>
-                        <form action="https://script.google.com/macros/s/AKfycbwEJoUZtPuvsocOVbSnyKN0FH6xdX57xgsSwYanuMSY6soDAgMiSmbAJ47LC_H4YQi9/exec" method="post" class="flex justify-center items-center gap-6 rounded-full pr-1 lg:shadow-2xl lg:shadow-gray-700/10 
+                        <form
+                            action="https://script.google.com/macros/s/AKfycbwEJoUZtPuvsocOVbSnyKN0FH6xdX57xgsSwYanuMSY6soDAgMiSmbAJ47LC_H4YQi9/exec"
+                            method="post" class="flex justify-center items-center gap-6 rounded-full pr-1 lg:shadow-2xl lg:shadow-gray-700/10 
                         dark:shadow-none bg-primary-800 dark:border-none lg:border border-gray-400"
                             data-astro-source-file="C:/Users/USER/Documents/LaunchFundr/src/components/CallToAction.astro"
                             data-astro-source-loc="60:58" data-aos="zoom-in" data-aos-duration="600"
@@ -3266,7 +3268,7 @@
                                 class="min-w-0 flex-auto rounded-full border-1 lg:border-0 bg-white/5 px-3.5 py-3 lg:py-4 text-dark dark:text-white ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-teal-500 sm:text-sm sm:leading-6"
                                 placeholder="Enter your email">
 
-                                <button type="submit" href=""
+                            <button type="submit" href=""
                                 class="relative flex h-12 w-full items-center justify-center px-8 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
                                 data-astro-source-file="C:/Users/USER/Documents/LaunchFundr/src/components/CallToAction.astro"
                                 data-astro-source-loc="72:14"> <span
@@ -3274,6 +3276,24 @@
                                     data-astro-source-file="C:/Users/USER/Documents/LaunchFundr/src/components/CallToAction.astro"
                                     data-astro-source-loc="75:18">Submit</span> </button>
                         </form>
+                        <script>
+                            $.ajax({
+                                type: "POST",
+                                url: "https://script.google.com/macros/d/YOUR_SCRIPT_ID/exec",
+                                data: $("#your-form").serialize(),
+                                success: function (response) {
+                                    // Display the success message as a notification
+                                    var notification = document.createElement("div");
+                                    notification.classList.add("bg-green-100", "border", "border-green-400", "text-green-700", "px-4", "py-3", "rounded", "relative", "mb-4");
+                                    notification.innerHTML = response;
+                                    document.body.appendChild(notification);
+                                    // Remove the notification after 5 seconds
+                                    setTimeout(function () {
+                                        notification.remove();
+                                    }, 5000);
+                                }
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
